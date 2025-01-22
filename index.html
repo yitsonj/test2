@@ -12,8 +12,8 @@
   <section class="header">
     <nav>
       <a href="index.html"><img src=""></a>
-      <div class="nav-links">
-        <i class="fa fa-times"></i>
+      <div class="nav-links" id="navlinks">
+        <i class="fa fa-times" onclick="hidemenu()"></i>
         <ul>
           <li><a href="">HOME</a></li>
           <li><a href="">ABOUT</a></li>
@@ -22,7 +22,7 @@
           <li><a href="">CONTACT</a></li>
         </ul>
       </div>
-      <i class="fa fa-bars"></i>
+      <i class="fa fa-bars" onclick="showmenu()"></i>
     </nav>
     
     <div class="text-box">
@@ -33,5 +33,18 @@
     
   </section>
   
+  <!--------JavaScript for toggle menu------->
+  <script>
+  
+  var navlinks = document.getElementbyid("navlinks");
+  function showmenu(){
+    navlinks.style.right = "0";
+  }
+  function hidemenu(){
+    navlinks.style.right = "-200px";
+  }
+  
+  </script>
+
 </body>
 </html>
